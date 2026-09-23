@@ -10,6 +10,6 @@ def read_csv_file(filename):
             y.append(float(row['Na2O + K2O']))
     return x, y
 
-x, y = read_csv_file('c:/Users/saand/Documents/Geology-818/data/Voyager samples.csv')
+# x, y = read_csv_file('c:/Users/saand/Documents/Geology-818/data/Voyager samples.csv')
     
-print(x, y)
+# print(x, y)
