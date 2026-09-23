@@ -8,7 +8,6 @@ def print_rocktype(silica,total_alkalis):
     vertices['basAnd']=[(52,1),(52,5),(57,6),(57,1)]
     vertices['ande']=[(57,1),(57,6),(63,7),(63,1)]
     vertices['dac']=[(63,1),(63,7),(70,7.5),(76,1)]
-    #polygon_list=[]
     point=Point(silica,total_alkalis)
     for rockType in vertices:
         polygon=Polygon(vertices[rockType])
