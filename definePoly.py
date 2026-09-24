@@ -1,5 +1,5 @@
 from shapely import Point,Polygon
-def print_rocktype(silica,total_alkalis):
+def get_rocktype(silica,total_alkalis):
     """
     Takes in a point and tells you the rock type
     """
@@ -15,4 +15,10 @@ def print_rocktype(silica,total_alkalis):
             polygon=Polygon(vertices[rockType])
             point=Point(si,total_alk)
             if str(polygon.contains(point)) == 'True':
-                [print(f'the point {si,total_alk} is {rockType})')]
+                return rockType
+    return "unknown"
+
+
+def print_rocktype(silica,total_alkalis):
+    rocktype = get_rocktype(silica,total_alkalis)
+    [print(f'the point {silica,total_alkalis} is {rocktype})')]
