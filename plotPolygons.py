@@ -95,15 +95,13 @@ def PlotPoly(x,y,plottype='All'):
     """
     Plots TAS plot. Must give a point, saves plot as alkali_plot.png
     """
+    fig = plt.figure()
+    ax1 = plt.gca()
     if plottype == 'TAS' or plottype == 'All':
-        fig = plt.figure()
-        ax1 = plt.gca()
         add_LeMaitre_fields(ax1)
         ax1.plot(x, y, 'o')
         saved_fig=plt.savefig('alkali_plot.png', dpi=900, bbox_inches='tight', pad_inches=0.1)
     if plottype == 'ZrTi' or plottype == 'All':
-        fig = plt.figure()
-        ax1 = plt.gca()
         add_ZrTi_fields(ax1)
         ax1.plot(x, y, 'o')
         plt.xscale('log')
