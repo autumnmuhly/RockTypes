@@ -1,13 +1,13 @@
 import matplotlib.pyplot as plt
 from shapely.geometry import Point,Polygon 
-__all__ = ['add_LeMaitre_fields']
+__all__ = ['add_ZrTi_fields']
 
 class MissingModuleException(Exception):
     pass
 
  
 # Plot LeMaitre lines
-def add_LeMaitre_fields(plot_axes, fontsize=8, color=(0.6, 0.6, 0.6)):
+def add_ZrTi_fields(plot_axes, fontsize=8, color=(0.6, 0.6, 0.6)):
     """Add fields for geochemical classifications from LeMaitre et al (2002)
     to pre-existing axes.  If necessary, the axes object can be retrieved via
     plt.gca() command. e.g.
@@ -72,15 +72,15 @@ def add_LeMaitre_fields(plot_axes, fontsize=8, color=(0.6, 0.6, 0.6)):
 
 
 
-def PlotPoly(Zr_Ti, Nb_Y, name='Zr_plot.png'):
-    """
-    Plots Zr/Ti vs Nb/Y plot. Must give a point, saves plot as Zr_plot.png
-    """
-    fig = plt.figure()
-    ax1 = plt.gca()
-    add_LeMaitre_fields(ax1)
-    ax1.plot(Zr_Ti, Nb_Y, 'o')
-    plt.xscale('log')
-    plt.yscale('log')
-    saved_fig=plt.savefig('Zr_plot.png', dpi=900, bbox_inches='tight', pad_inches=0.1)
-    return saved_fig
+# def PlotPoly(Zr_Ti, Nb_Y, name='Zr_plot.png'):
+#     """
+#     Plots Zr/Ti vs Nb/Y plot. Must give a point, saves plot as Zr_plot.png
+#     """
+#     fig = plt.figure()
+#     ax1 = plt.gca()
+#     add_ZrTi_fields(ax1)
+#     ax1.plot(Zr_Ti, Nb_Y, 'o')
+#     plt.xscale('log')
+#     plt.yscale('log')
+#     saved_fig=plt.savefig('Zr_plot.png', dpi=900, bbox_inches='tight', pad_inches=0.1)
+#     return saved_fig
